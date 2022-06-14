@@ -1,0 +1,346 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}Accueil | {% endblock title %}
+
+
+
+{% block content %}
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+      {% if main %}
+      <section class="hero" id="home">
+
+        <div class="container">
+
+          <p class="section-subtitle">{{ main.title|safe|capfirst }}</p>
+
+          <h2 class="h1 hero-title">{{ main.introduction|safe|capfirst }}</h2>
+
+          {% comment %} <p class="hero-text">
+            Explore on the world's best & largest NFT marketplace
+          </p> {% endcomment %}
+
+        </div>
+
+        <svg class="hero-bg-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 465" version="1.1">
+          <defs>
+            <linearGradient x1="49.7965246%" y1="28.2355058%" x2="49.7778147%" y2="98.4657689%" id="linearGradient-1">
+              <stop stop-color="rgba(69,40,220, 0.15)" offset="0%"></stop>
+              <stop stop-color="rgba(87,4,138, 0.15)" offset="100%"></stop>
+            </linearGradient>
+          </defs>
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <polygon points="" fill="url(#linearGradient-1)">
+              <animate id="graph-animation" xmlns="http://www.w3.org/2000/svg" dur="2s" repeatCount=""
+                attributeName="points"
+                values="0,464 0,464 111.6,464 282.5,464 457.4,464 613.4,464 762.3,464 912.3,464 1068.2,464 1191.2,464 1328.1,464 1440.1,464 1440.1,464 0,464; 0,464 0,367 111.6,323.3 282.5,373 457.4,423.8 613.4,464 762.3,464 912.3,464 1068.2,464 1191.2,464 1328.1,464 1440.1,464 1440.1,464 0,464; 0,464 0,367 111.6,263 282.5,336.6 457.4,363.5 613.4,414.4 762.3,464 912.3,464 1068.2,464 1191.2,464 1328.1,464 1440.1,464 1440.1,464 0,464; 0,464 0,367 111.6,263 282.5,282 457.4,323.3 613.4,340 762.3,425.6 912.3,464 1068.2,464 1191.2,464 1328.1,464 1440.1,464 1440.1,464 0,464; 0,464 0,367 111.6,263 282.5,282 457.4,263 613.4,290.4 762.3,368 912.3,446.4 1068.2,464 1191.2,464 1328.1,464 1440.1,464 1440.1,464 0,464; 0,464 0,367 111.6,263 282.5,282 457.4,263 613.4,216 762.3,329.6 912.3,420 1068.2,427.6 1191.2,464 1328.1,464 1440.1,464 1440.1,464 0,464; 0,464 0,367 111.6,263 282.5,282 457.4,263 613.4,216 762.3,272 912.3,402.4 1068.2,373 1191.2,412 1328.1,464 1440.1,464 1440.1,464 0,464; 0,464 0,367 111.6,263 282.5,282 457.4,263 613.4,216 762.3,272 912.3,376 1068.2,336.6 1191.2,334 1328.1,404 1440.1,464 1440.1,464 0,464; 0,464 0,367 111.6,263 282.5,282 457.4,263 613.4,216 762.3,272 912.3,376 1068.2,282 1191.2,282 1328.1,314 1440.1,372.8 1440.1,464 0,464; 0,464 0,367 111.6,263 282.5,282 457.4,263 613.4,216 762.3,272 912.3,376 1068.2,282 1191.2,204 1328.1,254 1440.1,236 1440.1,464 0,464; 0,464 0,367 111.6,263 282.5,282 457.4,263 613.4,216 762.3,272 912.3,376 1068.2,282 1191.2,204 1328.1,164 1440.1,144.79999999999998 1440.1,464 0,464; 0,464 0,367 111.6,263 282.5,282 457.4,263 613.4,216 762.3,272 912.3,376 1068.2,282 1191.2,204 1328.1,164 1440.1,8 1440.1,464 0,464;"
+                fill="freeze"></animate>
+            </polygon>
+          </g>
+        </svg> 
+
+      </section>
+      {% else %}
+      <section class="hero" id="home">
+
+        <div class="container">
+
+          <p class="section-subtitle">Infinity Media</p>
+
+          <h2 class="h1 hero-title">Discover, collect, and sell extraordinary NFTs</h2>
+
+          <p class="hero-text">
+            Explore on the world's best & largest NFT marketplace
+          </p>
+
+
+        </div>
+
+        <svg class="hero-bg-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 465" version="1.1">
+          <defs>
+            <linearGradient x1="49.7965246%" y1="28.2355058%" x2="49.7778147%" y2="98.4657689%" id="linearGradient-1">
+              <stop stop-color="rgba(69,40,220, 0.15)" offset="0%"></stop>
+              <stop stop-color="rgba(87,4,138, 0.15)" offset="100%"></stop>
+            </linearGradient>
+          </defs>
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <polygon points="" fill="url(#linearGradient-1)">
+              <animate id="graph-animation" xmlns="http://www.w3.org/2000/svg" dur="2s" repeatCount=""
+                attributeName="points"
+                values="0,464 0,464 111.6,464 282.5,464 457.4,464 613.4,464 762.3,464 912.3,464 1068.2,464 1191.2,464 1328.1,464 1440.1,464 1440.1,464 0,464; 0,464 0,367 111.6,323.3 282.5,373 457.4,423.8 613.4,464 762.3,464 912.3,464 1068.2,464 1191.2,464 1328.1,464 1440.1,464 1440.1,464 0,464; 0,464 0,367 111.6,263 282.5,336.6 457.4,363.5 613.4,414.4 762.3,464 912.3,464 1068.2,464 1191.2,464 1328.1,464 1440.1,464 1440.1,464 0,464; 0,464 0,367 111.6,263 282.5,282 457.4,323.3 613.4,340 762.3,425.6 912.3,464 1068.2,464 1191.2,464 1328.1,464 1440.1,464 1440.1,464 0,464; 0,464 0,367 111.6,263 282.5,282 457.4,263 613.4,290.4 762.3,368 912.3,446.4 1068.2,464 1191.2,464 1328.1,464 1440.1,464 1440.1,464 0,464; 0,464 0,367 111.6,263 282.5,282 457.4,263 613.4,216 762.3,329.6 912.3,420 1068.2,427.6 1191.2,464 1328.1,464 1440.1,464 1440.1,464 0,464; 0,464 0,367 111.6,263 282.5,282 457.4,263 613.4,216 762.3,272 912.3,402.4 1068.2,373 1191.2,412 1328.1,464 1440.1,464 1440.1,464 0,464; 0,464 0,367 111.6,263 282.5,282 457.4,263 613.4,216 762.3,272 912.3,376 1068.2,336.6 1191.2,334 1328.1,404 1440.1,464 1440.1,464 0,464; 0,464 0,367 111.6,263 282.5,282 457.4,263 613.4,216 762.3,272 912.3,376 1068.2,282 1191.2,282 1328.1,314 1440.1,372.8 1440.1,464 0,464; 0,464 0,367 111.6,263 282.5,282 457.4,263 613.4,216 762.3,272 912.3,376 1068.2,282 1191.2,204 1328.1,254 1440.1,236 1440.1,464 0,464; 0,464 0,367 111.6,263 282.5,282 457.4,263 613.4,216 762.3,272 912.3,376 1068.2,282 1191.2,204 1328.1,164 1440.1,144.79999999999998 1440.1,464 0,464; 0,464 0,367 111.6,263 282.5,282 457.4,263 613.4,216 762.3,272 912.3,376 1068.2,282 1191.2,204 1328.1,164 1440.1,8 1440.1,464 0,464;"
+                fill="freeze"></animate>
+            </polygon>
+          </g>
+        </svg> 
+
+      </section>
+      {% endif %}
+
+
+
+
+
+      <!-- 
+        - #JEUX
+      -->
+
+      <section class="section explore" id="explore">
+        <div class="container">
+
+          <p class="section-subtitle">Jeux videos</p>
+
+          <div class="title-wrapper">
+            <h2 class="h2 section-title">Les jeux les plus populaires</h2>
+
+            <a href="{% url 'game:liste' %}" class="btn-link">
+              <span>Tout voir</span>
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+          </div>
+
+          <ul class="grid-list">
+
+            {% for game in games %}
+
+            <li>
+              <div class="card explore-card">
+
+                <figure class="card-banner">
+                  <a >
+                    <img src="{{ game.game_image.url }}" width="600" height="600" loading="lazy"
+                      alt="{{ game.game_title|safe|capfirst }}" class="img-cover">
+                  </a>
+                </figure>
+
+                <h3 class="h3 card-title">
+                  <a >{{ game.game_title|safe|capfirst }}</a>
+                </h3>
+
+                <span class="card-author">
+                   <a  class="author-link">{{ game.game_categorie|safe|lower }}</a>
+                </span>
+
+                {% comment %} <div class="wrapper">
+                  <data class="wrapper-item" value="1.5">1.5 ETH</data>
+
+                  <span class="wrapper-item">1 of 1</span>
+                </div> {% endcomment %}
+
+                <button class="btn">
+                  <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+
+                  <span>Télécharger</span>
+                </button>
+
+              </div>
+            </li>
+
+            {% endfor %}
+            
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #EQUIPE
+      -->
+
+      <section class="section top-seller" id="top-seller">
+        <div class="container">
+
+          <p class="section-subtitle">Membres</p>
+
+          <h2 class="h2 section-title">Notre équipe</h2>
+
+          <ul class="grid-list">
+
+            {% for author in authors %}
+
+            <li>
+              <div class="card top-seller-card">
+
+                <figure class="card-avatar">
+                  <a >
+                    <img src="{{ author.profile.url }}" width="64" height="64" loading="lazy" alt="{{ author.user.username|safe|capfirst }}">
+                  </a>
+                </figure>
+
+                <div>
+                  <h3 class="card-title">
+                    <a >{{ author.user.username|safe|capfirst }}</a>
+                  </h3>
+
+                  {% comment %} <data value="1.5">1.5 BNB</data> {% endcomment %}
+                </div>
+
+              </div>
+            </li>
+
+            {% endfor %}
+          </ul>
+
+        </div>
+      </section>
+
+
+
+      <!-- 
+        - #BLOG
+      -->
+
+      <section class="section collection" id="collection">
+        <div class="container">
+
+          <p class="section-subtitle">Blog</p>
+
+          <div class="title-wrapper">
+            <h2 class="h2 section-title">Derniers articles</h2>
+
+            <a href="{% url 'blog:main' %}" class="btn-link">
+              <span>Tout voir</span>
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+          </div>
+
+          <ul class="grid-list">
+
+            {% for post in posts %}
+
+            <li>
+              <a href="#" class="card collection-card">
+
+                <figure class="card-banner">
+                  <img src="{{ post.post_image.url }}" width="600" height="450" loading="lazy"
+                    alt="{{ post.title|safe|capfirst }}" class="img-cover">
+                </figure>
+
+                <figure class="card-avatar">
+                  <img src="{{ post.user.profile.url }}" width="64" height="64" loading="lazy" alt="{{ post.user.user.username|safe|capfirst }}">
+                </figure>
+
+                <h3 class="h3 card-title">{{ post.title|safe|capfirst }}</h3>
+
+                <span class="card-text">{{ post.timestamp|date }}</span>
+
+              </a>
+            </li>
+
+            {% endfor %}
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+      
+      <!-- DIRECTION -->
+      <section class="section top-seller direction" id="top-seller" >
+        <div class="container">
+      
+          <p class="section-subtitle">Direction</p>
+      
+          <h2 class="h2 section-title">Encadreurs</h2>
+      
+          <ul class="grid-list">
+            {% for membre in direction %}
+      
+            <li>
+              <div class="card top-seller-card">
+      
+                <figure class="card-avatar">
+                  <a href="#">
+                    <img src="{{ membre.image.url }}" width="64" height="64" loading="lazy" alt="{{ membre.name|safe|capfirst }}">
+                  </a>
+                </figure>
+      
+                <div>
+                  <h3 class="card-title">
+                    <a href="#">{{ membre.name|safe|capfirst }}</a>
+                  </h3>
+      
+                  <data value="1.9">{{ membre.role|safe|capfirst }}</data>
+                </div>
+      
+              </div>
+            </li>
+
+            {% endfor %}
+      
+      
+          </ul>
+      
+        </div>
+      </section>
+
+      
+      
+      
+      
+      
+      
+      {% if partenaires %}
+      <!-- NOS PARTENAIRES -->
+      <section class="section instruction" id="instruction">
+        <div class="container">
+
+          <p class="section-subtitle">Nos partenaires</p>
+
+          <h2 class="h2 section-title">Ces sponsors nous font confiance</h2>
+
+          <ul class="grid-list">
+
+            {% for partenaire in  partenaires %}
+            <li class="instruction-item">
+
+              <div class="instruction-icon">
+                {% comment %} <ion-icon name="wallet-outline"></ion-icon> {% endcomment %}
+                <img src="{{ partenaire.logo.url }}" alt="{{ partenaire.partenaire|safe|capfirst }}" width="40%" height="auto">
+              </div>
+
+              <h3 class="instruction-title">{{ partenaire.partenaire|safe|capfirst }}</h3>
+
+              <p class="instruction-text">
+                {% comment %} {{ partenaire.description|safe|capfirst }} {% endcomment %}
+              </p>
+
+            </li>
+            {% endfor %}
+
+          </ul>
+
+        </div>
+      </section>
+      {% endif %}
+
+
+
+
+    </article>
+  </main>
+
+
+
+
+
+{% endblock content %}
+

@@ -1,0 +1,122 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}Jeux | {% endblock title %}
+
+
+
+{% block content %}
+
+
+
+
+
+
+
+  <main>
+    <article>
+
+
+
+
+      <!-- 
+        - #LIST OF GAME
+      -->
+
+      <section class="section explore" id="explore">
+        <div class="container">
+
+          <p class="section-subtitle">Jeux videos</p>
+
+          <div class="title-wrapper">
+            <h2 class="h2 section-title">Tous les jeux</h2>
+          </div>
+
+          <ul class="grid-list">
+
+            {% for game in page_obj %}
+
+            <li>
+              <div class="card explore-card">
+
+                <figure class="card-banner">
+                  <a >
+                    <img src="{{ game.game_image.url }}" width="600" height="600" loading="lazy"
+                      alt="{{ game.game_title|safe|capfirst }}" class="img-cover">
+                  </a>
+                </figure>
+
+                <h3 class="h3 card-title">
+                  <a >{{ game.game_title|safe|capfirst }}</a>
+                </h3>
+
+                <span class="card-author">
+                  <a  class="author-link">{{ game.game_categorie|safe|lower }}</a>
+                </span>
+
+                <button class="btn">
+                  <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+
+                  <span>Télécharger</span>
+                </button>
+
+              </div>
+            </li>
+
+            {% endfor %}
+
+          </ul>
+
+        </div>
+
+        <div class="pagination" style = "display: block; margin: 30px;">
+          <ul 
+          style="
+                 color: #fff;
+                 padding: 15px 20px;
+                 display: block;
+                 text-align: center;
+                 ">
+            {% if page_obj.has_previous %}
+            <li style=" display: inline-block; color: white; padding: 8px 20px; border-radius: 50%; border: 1px solid #fff; cursor: pointer!important;"><a href="?page={{ page_obj.previous_page_number }}" class="pagination-links" style="margin: 0px 4px;">&laquo;</a></li>
+            {% else %}
+            <li style=" display: inline-block; color: white; padding: 8px 20px; border-radius: 50%; border: 1px solid #fff; cursor: pointer!important;"><a href="?page=1" class="pagination-links" style="margin: 0px 4px;">&laquo;</a></li>
+            {% endif %}
+
+            
+            {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+
+            
+            {% if  page_obj.has_next %}
+            <li style=" display: inline-block; color: white; padding: 8px 20px; border-radius: 50%; border: 1px solid #fff; cursor: pointer!important;"><a href="?page={{ page_obj.next_page_number }}" class="pagination-links" style="margin: 0px 4px;">&raquo;</a></li>
+            {% else %}
+            <li style=" display: inline-block; color: white; padding: 8px 20px; border-radius: 50%; border: 1px solid #fff; cursor: pointer!important;"><a href="?page={{ page_obj.paginator.num_pages }}" class="pagination-links" style="margin: 0px 4px;">&raquo;</a></li>
+            {% endif %}
+          </ul>
+        </div>
+        
+        
+      </section>
+
+
+
+
+
+      
+
+    </article>
+  </main>
+
+
+
+
+
+
+
+{% endblock content %}
+
+<!-- git push https://github.com/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@github.com/keita8/INFINITY.git
+
+
+git push https://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@github.com/keita8/INFINITY.git
+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 -->

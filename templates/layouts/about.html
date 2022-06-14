@@ -1,0 +1,158 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block title %}À propos | {% endblock title %}
+
+
+
+{% block content %}
+
+    <main>
+        <article>
+
+
+            {% if about %}
+            <section class="hero" id="home">
+
+                <div class="container">
+
+                    <p class="section-subtitle">A propos de nous</p>
+
+                    <h2 class="h1 hero-title">{{ about.introduction|safe|capfirst }}</h2>
+
+                </div>
+
+            </section>
+
+            {% else %}
+            
+            <section class="hero" id="home">
+
+                <div class="container">
+
+                    <p class="section-subtitle">A propos de nous</p>
+
+                    <h2 class="h1 hero-title">Faites immersion dans nos locaux pour en savoir plus sur nous</h2>
+
+                    <p class="hero-text">
+                        Explore on the world's best & largest NFT marketplace
+                    </p>
+
+
+                </div>
+
+            </section>
+            {% endif %}
+
+
+
+
+
+            <!-- 
+        - #EXPLORE
+      -->
+{% comment %} 
+            <section class="section explore" id="explore">
+                <div class="container">
+
+                </div>
+            </section>
+
+
+
+
+
+            <section class="section instruction" id="instruction">
+                <div class="container">
+
+                    <p class="section-subtitle">How It Works</p>
+
+                    <h2 class="h2 section-title">Create and sell your NFTs</h2>
+
+                    <ul class="grid-list">
+
+                        <li class="instruction-item">
+
+                            <div class="instruction-icon">
+                                <ion-icon name="wallet-outline"></ion-icon>
+                            </div>
+
+                            <h3 class="instruction-title">Set up your wallet</h3>
+
+                            <p class="instruction-text">
+                                Once you’ve set up your wallet of choice, connect it to OpenSea by clicking the NFT
+                                Marketplace in the
+                                top right corner.
+                                Learn about the wallets we support.
+                            </p>
+
+                        </li>
+
+                        <li class="instruction-item">
+
+                            <div class="instruction-icon">
+                                <ion-icon name="grid-outline"></ion-icon>
+                            </div>
+
+                            <h3 class="instruction-title">Create your collection</h3>
+
+                            <p class="instruction-text">
+                                Click Create and set up your collection. Add social links, a description, profile &
+                                banner images, and
+                                set a secondary
+                                sales fee.
+                            </p>
+
+                        </li>
+
+                        <li class="instruction-item">
+
+                            <div class="instruction-icon">
+                                <ion-icon name="file-tray-outline"></ion-icon>
+                            </div>
+
+                            <h3 class="instruction-title">Add your NFTs</h3>
+
+                            <p class="instruction-text">
+                                Upload your work (image, video, audio, or 3D art), add a title and description, and
+                                customize your NFTs
+                                with properties,
+                                stats, and unlockable content.
+                            </p>
+
+                        </li>
+
+                        <li class="instruction-item">
+
+                            <div class="instruction-icon">
+                                <ion-icon name="bag-handle-outline"></ion-icon>
+                            </div>
+
+                            <h3 class="instruction-title">List them for sale</h3>
+
+                            <p class="instruction-text">
+                                Choose between auctions, fixed-price listings, and declining-price listings. You choose
+                                how you want to
+                                sell your NFTs!
+                            </p>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+            </section> {% endcomment %}
+
+        </article>
+    </main>
+
+
+{% endblock content %}
+
+
+<!-- git push https://github.com/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@github.com/keita8/INFINITY.git
+
+
+git push https://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@github.com/keita8/INFINITY.git
+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 -->

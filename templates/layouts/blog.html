@@ -1,0 +1,117 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}Blog | {% endblock title %}
+
+
+
+{% block content %}
+
+
+
+
+
+
+
+  <main>
+    <article>
+
+
+
+
+      <!-- 
+        - #EXPLORE
+      -->
+
+      <section class="section explore" id="explore">
+        <div class="container">
+
+          <p class="section-subtitle">Blog</p>
+
+          <div class="title-wrapper">
+            <h2 class="h2 section-title">Tous les articles</h2>
+          </div>
+
+          <ul class="grid-list">
+
+            {% for post in page_obj %}
+
+            <li>
+              <div class="card explore-card">
+
+                <figure class="card-banner">
+                  <a href="#">
+                    <img src="{{ post.post_image.url }}" width="600" height="600" loading="lazy"
+                      alt="{{ post.title|safe|capfirst }}" class="img-cover">
+                  </a>
+                </figure>
+
+                <h3 class="h3 card-title">
+                  <a>{{ post.title|safe|capfirst }}</a>
+                </h3>
+
+                <span class="card-author">
+                   <a class="author-link">{{ post.cat.categorie|safe|capfirst }}</a>
+                </span>
+
+              </div>
+            </li>
+
+            {% endfor %}
+
+
+          </ul>
+
+        </div>
+
+        {% if page_obj %}
+        <div class="pagination" style = "display: block; margin: 30px;">
+          <ul 
+          style="
+                 color: #fff;
+                 padding: 15px 20px;
+                 display: block;
+                 text-align: center;
+                 ">
+            {% if page_obj.has_previous %}
+            <li style=" display: inline-block; color: white; padding: 8px 20px; border-radius: 50%; border: 1px solid #fff; cursor: pointer!important;"><a href="?page={{ page_obj.previous_page_number }}" class="pagination-links" style="margin: auto; width:100%;">&laquo;</a></li>
+            {% else %}
+            <li style=" display: inline-block; color: white; padding: 8px 20px; border-radius: 50%; border: 1px solid #fff; cursor: pointer!important;"><a href="?page=1" class="pagination-links" style="margin: auto; width:100%;">&laquo;</a></li>
+            {% endif %}
+
+            
+            {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+
+            
+            {% if  page_obj.has_next %}
+            <li style=" display: inline-block; color: white; padding: 8px 20px; border-radius: 50%; border: 1px solid #fff; cursor: pointer!important;"><a href="?page={{ page_obj.next_page_number }}" class="pagination-links" style="margin: auto; width:100%;">&raquo;</a></li>
+            {% else %}
+            <li style=" display: inline-block; color: white; padding: 8px 20px; border-radius: 50%; border: 1px solid #fff; cursor: pointer!important;"><a href="?page={{ page_obj.paginator.num_pages }}" class="pagination-links" style="margin: auto; width:100%;">&raquo;</a></li>
+            {% endif %}
+          </ul>
+        </div>
+        {% else %}
+
+        <div class="pagination" style = "display: block; margin: 50px;">
+
+
+        </div>
+        {% endif %}
+        
+      </section>
+
+
+
+
+
+      
+
+    </article>
+  </main>
+
+
+
+
+
+
+{% endblock content %}
